@@ -1,235 +1,404 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geisila Costa | Portfólio</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- CSS Personalizado -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- Biblioteca de Animações (AOS) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-</head>
-<body>
-  <!-- Modal -->
-  <div class="modal fade" id="constructionModal" tabindex="-1" aria-labelledby="constructionModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="constructionModalLabel">Site em Construção</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Este site ainda está em construção. Faltam alguns detalhes.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geisila Costa | Portfólio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Biblioteca de Animações (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="constructionModal"
+      tabindex="-1"
+      aria-labelledby="constructionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="constructionModalLabel">
+              Site em Construção
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Este site ainda está em construção. Faltam alguns detalhes.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    // Exibir o modal ao carregar a página
-    window.onload = function() {
-      var myModal = new bootstrap.Modal(document.getElementById('constructionModal'));
-      myModal.show();
-    }
-  </script>
+    <script>
+      // Exibir o modal ao carregar a página
+      window.onload = function () {
+        var myModal = new bootstrap.Modal(
+          document.getElementById("constructionModal")
+        );
+        myModal.show();
+      };
+    </script>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <img src="img/imagemLlogoSemFundo.jpg" class="logo img-fluid" alt="" />
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <img src="img/imagemLlogoSemFundo.jpg" class="logo img-fluid" alt="">
+        <a class="navbar-brand" href="#">GCosta</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre Mim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projetos">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#habilidades">Habilidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="formacoes.html">Formações</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/GeisilaCosta"
+                >Github</a
+              >
+            </li>
 
-      <a class="navbar-brand" href="#">GCosta</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#inicio">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#sobre">Sobre Mim</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projetos">Projetos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#habilidades">Habilidades</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="formacoes.html">Formações</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/GeisilaCosta">Github</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:geisilaportifolio@gmail.com"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seção Início -->
+    <section id="inicio" class="hero-section d-flex align-items-center">
+      <div class="container text-center">
+        <img
+          src="img/Imagem do WhatsApp de 2025-01-04 à(s) 09.25.45_30bb963f.jpg"
+          alt="Geisila Costa"
+          class="profile-img rounded-circle mb-4"
+          data-aos="fade-up"
+        />
+        <h1 data-aos="fade-up" data-aos-delay="200">Geisila Costa</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">
+          Analista de Desenvolvimento de Sistemas
+        </h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">
+          Desenvolvedora Full Stack
+        </h2>
+        <p class="tagline" data-aos="fade-up" data-aos-delay="600">
+          Transformando ideias em soluções digitais com tecnologia, inovação e
+          criatividade.
+        </p>
+        <div class="mt-4" data-aos="figure">
+          <a href="#projetos" class="btn btn-success btn-lg me-3">Projetos</a>
+          <a href="#contato" class="btn btn-outline-light btn-lg">Contato</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section text-center py-5" data-aos="fade-up">
+      <a
+        href="dowloads/GeisilaSCosta.pdf"
+        download="GeisilaSCosta.pdf"
+        class="download-button"
+      >
+        <button class="btn btn-outline-danger">Baixar Currículo em PDF</button>
+      </a>
+    </section>
+    <!-- Seção Sobre Mim -->
+    <section id="sobre" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mim</h2>
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right">
+            <img
+              src="img/logo 2.png"
+              alt="Sobre Mim"
+              class="img-fluid rounded"
+              data-aos="zoom-in"
+              id="sobre-mim-image"
+            />
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <p class="lead">
+              Sou uma profissional apaixonada por tecnologia,Sempre buscando
+              conhecimento e novidades para criar soluções inovadoras e
+              eficientes.
+            </p>
+            <p>
+              Minha jornada inclui diversos projetos que envolvem
+              desenvolvimento full stack, web, mobile, Python, OutSystems e
+              diversas ferramentas modernas.
+            </p>
+            <p>
+              Meu objetivo é sempre buscar o equilíbrio entre estética e
+              funcionalidade, oferecendo ótimas soluções e experiências ao
+              usuário
+            </p>
+            <p>
+              Acredito no poder da tecnologia para transformar ideias em
+              realidade e estou sempre em busca de novos desafios para expandir
+              meus conhecimentos e contribuir para projetos impactantes.
+            </p>
+            <p>
+              No meu portfólio, você encontrará uma variedade de projetos que
+              demonstram minhas habilidades e conhecimentos. Estou sempre aberto
+              a novos desafios e oportunidades para crescer profissionalmente e
+              colaborar com outras pessoas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Projetos</h2>
+        <div class="row">
+
+           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card">
+          <video class="card-img-top img-fluid" controls>
+            <source src="videos/monitore.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+          <div class="card-body">
+            <h5 class="card-title">Monitore</h5>
+            <p class="card-text">Monitore é um sistema web que fornece previsões meteorológicas e informações sobre o nível de água para ajudar comunidades a se prepararem para desastres naturais. Utiliza HTML, CSS, JavaScript, a API OpenWeatherMap e Leaflet.js para fornecer dados meteorológicos e mapas interativos.
+
+              Visão Geral
+              O sistema exibe dados meteorológicos e informações de risco de enchentes em tempo real através de um mapa interativo, permitindo que os usuários visualizem regiões de risco e detalhes climáticos.</p>
+            
+            <div id="desc1" class="hidden-description" style="display:none;">
+              <p>Funcionalidades
+                Dados Meteorológicos em Tempo Real: Informações atualizadas sobre o clima, como temperatura, umidade e velocidade do vento.
+                Alertas de Enchentes: Notificações sobre condições que podem levar a enchentes.
+                Mapa Interativo: Visualização de áreas de risco e detalhes geográficos.
+                Visualização de Níveis de Água: Dados sobre níveis de água e alertas em locais propensos a enchentes.
+                Tecnologias Utilizadas
+                HTML, CSS e JavaScript: Para estrutura, estilo e interatividade.
+                OpenWeatherMap API: Para dados meteorológicos em tempo real.
+                Leaflet.js: Para mapas interativos.
+                Futuras Implementações
+                Notificações baseadas em geolocalização.
+                Camadas adicionais de mapa para previsões detalhadas e dados históricos.
+                Integração com redes sociais para compartilhamento de alertas.</p>
+            </div>
+            <button class="btn btn-link" onclick="toggleDescription('desc1')">Ler mais</button>
+            <a href="https://github.com/GeisilaCosta/monitore.git" target="_blank">
+              <button class="btn btn-link">Repositorio</button>
+          </a>
+          </div>
+        </div>
+      </div>
           
-          <li class="nav-item">
-            <a class="nav-link" href="mailto:geisilaportifolio@gmail.com">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="video2.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
 
-  <!-- Seção Início -->
-  <section id="inicio" class="hero-section d-flex align-items-center">
-    <div class="container text-center">
-      <img src="img/Imagem do WhatsApp de 2025-01-04 à(s) 09.25.45_30bb963f.jpg" alt="Geisila Costa" class="profile-img rounded-circle mb-4" data-aos="fade-up">
-      <h1 data-aos="fade-up" data-aos-delay="200">Geisila Costa</h1>
-      <h2 data-aos="fade-up" data-aos-delay="400">Analista de Desenvolvimento de Sistemas</h2>
-      <h2 data-aos="fade-up" data-aos-delay="400">Desenvolvedora Full Stack</h2>
-      <p class="tagline" data-aos="fade-up" data-aos-delay="600">Transformando ideias em soluções digitais com tecnologia, inovação e criatividade.</p>
-      <div class="mt-4" data-aos="figure" >
-        <a href="#projetos" class="btn btn-success btn-lg me-3">Projetos</a>
-        <a href="#contato" class="btn btn-outline-light btn-lg">Contato</a>
-      </div>
-    </div>
-  </section>
+              <div class="card-body">
+                <h5 class="card-title">E-commerce Mobile App Design</h5>
+                <p class="card-text">
+                  Desenvolvimento de um aplicativo de e-commerce.
+                </p>
+                <button class="btn btn-link" onclick="toggleDescription('desc2')">Ler mais</button>
+                <div id="desc2" class="hidden-description" style="display:none;">
+                  <p>Descrição detalhada do projeto de e-commerce...</p>
+                </div>
 
-  <section class="download-section text-center py-5" data-aos="fade-up">
-    <a href="dowloads/GeisilaSCosta.pdf" download="GeisilaSCosta.pdf" class="download-button">
-      <button class="btn btn-outline-danger">Baixar Currículo em PDF</button>
-    </a>
-  </section>
-  <!-- Seção Sobre Mim -->
-  <section id="sobre" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mim</h2>
-      <div class="row">
-        <div class="col-md-6" data-aos="fade-right">
-      <img src="img/logo 2.png" alt="Sobre Mim" class="img-fluid rounded" data-aos="zoom-in" id="sobre-mim-image">
-
-        </div>
-        <div class="col-md-6" data-aos="fade-left">
-          <p class="lead">Sou uma profissional apaixonada por tecnologia,Sempre buscando conhecimento e novidades para criar soluções inovadoras e eficientes. Minha jornada inclui diversos projetos que envolvem desenvolvimento full stack, web, mobile. Python, OutSystems e diversas ferramentas modernas.</p>
-          <p>Meu objetivo é sempre buscar o equilíbrio entre estética e funcionalidade, oferecendo ótimas soluções e experiências ao usuário.</p>
-          <p>Acredito no poder da tecnologia para transformar ideias em realidade e estou sempre em busca de novos desafios para expandir meus conhecimentos e contribuir para projetos impactantes.</p>
-          <p>No meu portfólio, você encontrará uma variedade de projetos que demonstram minhas habilidades e conhecimentos. Estou sempre aberto a novos desafios e oportunidades para crescer profissionalmente e colaborar com outras pessoas.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção Projetos -->
-  <section id="projetos" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4" data-aos="fade-up">Projetos</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card">
-<video class="card-img-top img-fluid" controls>
-  <source src="video1.mp4" type="video/mp4">
-  Seu navegador não suporta o elemento de vídeo.
-</video>
-
-
-            <div class="card-body">
-              <h5 class="card-title">Dating Mobile App Design</h5>
-              <p class="card-text">Design e desenvolvimento de um aplicativo de relacionamentos.</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="card">
-<video class="card-img-top img-fluid" controls>
-  <source src="video2.mp4" type="video/mp4">
-  Seu navegador não suporta o elemento de vídeo.
-</video>
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="video3.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
 
+              <div class="card-body">
+                <h5 class="card-title">Threat Mobile App Design</h5>
+                <p class="card-text">
+                  Aplicativo para monitoramento de ameaças.
+                </p>
+                <button class="btn btn-link" onclick="toggleDescription('desc3')">Ler mais</button>
+                <div id="desc3" class="hidden-description" style="display:none;">
+                  <p>Descrição detalhada do projeto de monitoramento de ameaças...</p>
+                </div>
 
-            <div class="card-body">
-              <h5 class="card-title">E-commerce Mobile App Design</h5>
-              <p class="card-text">Desenvolvimento de um aplicativo de e-commerce.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="card">
-<video class="card-img-top img-fluid" controls>
-  <source src="video3.mp4" type="video/mp4">
-  Seu navegador não suporta o elemento de vídeo.
-</video>
-
-
-            <div class="card-body">
-              <h5 class="card-title">Threat Mobile App Design</h5>
-              <p class="card-text">Aplicativo para monitoramento de ameaças.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Seção Habilidades -->
-  <section id="habilidades" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4" data-aos="fade-up">Habilidades</h2>
-      <div class="row">
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <h4>Tecnologias</h4>
-          <ul>
-            <li>Python (Análise de Dados e IA)</li>
-            <li>OutSystems (Low-Code)</li>
-            <li>JavaScript, React, Node.js</li>
-            <li>HTML, CSS, Bootstrap</li>
-          </ul>
-        </div>
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <h4>Soft Skills</h4>
-          <ul>
-            <li>Comunicação</li>
-            <li>Trabalho em Equipe</li>
-            <li>Resolução de Problemas</li>
-            <li>Inovação</li>
-          </ul>
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Habilidades</h2>
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <h4>Tecnologias</h4>
+            <ul>
+              <li>Python (Análise de Dados e IA)</li>
+              <li>OutSystems (Low-Code)</li>
+              <li>JavaScript, React, Node.js</li>
+              <li>HTML, CSS, Bootstrap</li>
+            </ul>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <h4>Soft Skills</h4>
+            <ul>
+              <li>Comunicação</li>
+              <li>Trabalho em Equipe</li>
+              <li>Resolução de Problemas</li>
+              <li>Inovação</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Seção Contato -->
-  <section id="contato" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4" data-aos="fade-up">Contato</h2>
-<form data-aos="fade-up" data-aos-delay="200" id="contactForm" >
+    <!-- Seção Contato -->
+    <section id="contato" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Contato</h2>
+        <form data-aos="fade-up" data-aos-delay="200" id="contactForm">
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label">Mensagem</label>
+            <textarea
+              class="form-control"
+              id="mensagem"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+        <p id="status-message" class="mt-3"></p>
+      </div>
+    </section>
 
-        <div class="mb-3">
-          <label for="nome" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="mensagem" class="form-label">Mensagem</label>
-          <textarea class="form-control" id="mensagem" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </form>
-      <p id="status-message" class="mt-3"></p>
-    </div>
-  </section>
+    <!-- Rodapé -->
+    <footer class="bg-dark py-3">
+      <div class="container text-center">
+        <p class="text-light">
+          &copy; 2025 Desenvolvido por Geisila Costa. Todos os direitos
+          reservados.
+        </p>
 
-  <!-- Bootstrap JS e Dependências -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  <!-- Biblioteca de Animações (AOS) -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- JS Personalizado -->
-  <script src="scripts.js"></script>
-  <script>
-    // Inicializa AOS
-    AOS.init();
-  </script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-</body>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/geisila-costa-7b3b2b237/"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/GeisilaCosta"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/geisilasilvadacosta"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/geisila.silvadacosta"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@geisilacosta21?_t=ZM-8up9mEhADG3&_r=1"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS e Dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Biblioteca de Animações (AOS) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS Personalizado -->
+    <script src="scripts.js"></script>
+    <script>
+      // Inicializa AOS
+      AOS.init();
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </body>
 </html>
