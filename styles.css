@@ -80,10 +80,28 @@ section {
 }
 
 #sobre-mim-image {
-    width: 300px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 400px;
+    height: 400px;
 }
 
 /* Cards de Projetos */
 .card {
     transition: transform 0.3s;
+}
+
+
+.social-icons {
+    font-size: 1.5rem;
+    margin-right: 10px;
+
+}
+.social-link {
+    color: #8a8787;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.social-link:hover {
+    color: #007bff;
 }
