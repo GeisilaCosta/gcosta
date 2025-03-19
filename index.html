@@ -204,43 +204,65 @@
       <div class="container">
         <h2 class="text-center mb-4" data-aos="fade-up">Projetos</h2>
         <div class="row">
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/monitore.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">Monitore</h5>
+                <p class="card-text">
+                  Monitore é um sistema web que fornece previsões meteorológicas
+                  e informações sobre o nível de água para ajudar comunidades a
+                  se prepararem para desastres naturais.
+                </p>
 
-           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card">
-          <video class="card-img-top img-fluid" controls>
-            <source src="videos/monitore.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
-          <div class="card-body">
-            <h5 class="card-title">Monitore</h5>
-            <p class="card-text">Monitore é um sistema web que fornece previsões meteorológicas e informações sobre o nível de água para ajudar comunidades a se prepararem para desastres naturais. Utiliza HTML, CSS, JavaScript, a API OpenWeatherMap e Leaflet.js para fornecer dados meteorológicos e mapas interativos.
+                <div
+                  id="desc1"
+                  class="hidden-description"
+                  style="display: none"
+                >
+                  <p>
+                    Utiliza HTML, CSS, JavaScript, a API OpenWeatherMap e
+                    Leaflet.js para fornecer dados meteorológicos e mapas
+                    interativos. Visão Geral O sistema exibe dados
+                    meteorológicos e informações de risco de enchentes em tempo
+                    real através de um mapa interativo, permitindo que os
+                    usuários visualizem regiões de risco e detalhes
+                    climáticos.Funcionalidades Dados Meteorológicos em Tempo
+                    Real: Informações atualizadas sobre o clima, como
+                    temperatura, umidade e velocidade do vento. Alertas de
+                    Enchentes: Notificações sobre condições que podem levar a
+                    enchentes. Mapa Interativo: Visualização de áreas de risco e
+                    detalhes geográficos. Visualização de Níveis de Água: Dados
+                    sobre níveis de água e alertas em locais propensos a
+                    enchentes. Tecnologias Utilizadas HTML, CSS e JavaScript:
+                    Para estrutura, estilo e interatividade. OpenWeatherMap API:
+                    Para dados meteorológicos em tempo real. Leaflet.js: Para
+                    mapas interativos. Futuras Implementações Notificações
+                    baseadas em geolocalização. Camadas adicionais de mapa para
+                    previsões detalhadas e dados históricos. Integração com
+                    redes sociais para compartilhamento de alertas.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc1', this)"
+                >
+                  Ler mais
+                </button>
 
-              Visão Geral
-              O sistema exibe dados meteorológicos e informações de risco de enchentes em tempo real através de um mapa interativo, permitindo que os usuários visualizem regiões de risco e detalhes climáticos.</p>
-            
-            <div id="desc1" class="hidden-description" style="display:none;">
-              <p>Funcionalidades
-                Dados Meteorológicos em Tempo Real: Informações atualizadas sobre o clima, como temperatura, umidade e velocidade do vento.
-                Alertas de Enchentes: Notificações sobre condições que podem levar a enchentes.
-                Mapa Interativo: Visualização de áreas de risco e detalhes geográficos.
-                Visualização de Níveis de Água: Dados sobre níveis de água e alertas em locais propensos a enchentes.
-                Tecnologias Utilizadas
-                HTML, CSS e JavaScript: Para estrutura, estilo e interatividade.
-                OpenWeatherMap API: Para dados meteorológicos em tempo real.
-                Leaflet.js: Para mapas interativos.
-                Futuras Implementações
-                Notificações baseadas em geolocalização.
-                Camadas adicionais de mapa para previsões detalhadas e dados históricos.
-                Integração com redes sociais para compartilhamento de alertas.</p>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                >
+                  <button class="btn btn-link">Repositorio</button>
+                </a>
+              </div>
             </div>
-            <button class="btn btn-link" onclick="toggleDescription('desc1')">Ler mais</button>
-            <a href="https://github.com/GeisilaCosta/monitore.git" target="_blank">
-              <button class="btn btn-link">Repositorio</button>
-          </a>
           </div>
-        </div>
-      </div>
-          
+
           <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
             <div class="card">
               <video class="card-img-top img-fluid" controls>
@@ -253,11 +275,20 @@
                 <p class="card-text">
                   Desenvolvimento de um aplicativo de e-commerce.
                 </p>
-                <button class="btn btn-link" onclick="toggleDescription('desc2')">Ler mais</button>
-                <div id="desc2" class="hidden-description" style="display:none;">
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc2', this)"
+                >
+                  Ler mais
+                </button>
+
+                <div
+                  id="desc2"
+                  class="hidden-description"
+                  style="display: none"
+                >
                   <p>Descrição detalhada do projeto de e-commerce...</p>
                 </div>
-
               </div>
             </div>
           </div>
@@ -273,11 +304,23 @@
                 <p class="card-text">
                   Aplicativo para monitoramento de ameaças.
                 </p>
-                <button class="btn btn-link" onclick="toggleDescription('desc3')">Ler mais</button>
-                <div id="desc3" class="hidden-description" style="display:none;">
-                  <p>Descrição detalhada do projeto de monitoramento de ameaças...</p>
-                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc3', this)"
+                >
+                  Ler mais
+                </button>
 
+                <div
+                  id="desc3"
+                  class="hidden-description"
+                  style="display: none"
+                >
+                  <p>
+                    Descrição detalhada do projeto de monitoramento de
+                    ameaças...
+                  </p>
+                </div>
               </div>
             </div>
           </div>

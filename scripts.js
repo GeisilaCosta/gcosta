@@ -45,11 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-function toggleDescription(id) {
+function toggleDescription(id, button) {
     var desc = document.getElementById(id);
     if (desc.style.display === "none") {
       desc.style.display = "block";
+      button.innerText = "Ler menos"; 
     } else {
       desc.style.display = "none";
+      button.innerText = "Ler mais";
     }
   }
