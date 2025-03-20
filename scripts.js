@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Animação de carregamento
     const heroSection = document.querySelector(".hero-section");
     if (heroSection) {
-        heroSection.style.opacity = "0";
+        heroSection.classList.add("fade-in");
         setTimeout(() => {
-            heroSection.style.transition = "opacity 1s";
-            heroSection.style.opacity = "1";
+            heroSection.classList.add("loaded");
         }, 500);
     }
 
@@ -15,29 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
     const statusMsg = document.getElementById("status-message");
 
-    if (form) {
-        form.addEventListener("submit", function (event) {
+    if (form && statusMsg) {
+        form.addEventListener("submit", async function (event) {
             event.preventDefault();
 
-            emailjs.sendForm("service_fkc1i6a", "template_c4mc5up", form)
-                .then((response) => {
-                    if (statusMsg) {
-                        statusMsg.textContent = "E-mail enviado com sucesso!";
-                        statusMsg.style.color = "black";
-                    }
-                    console.log("E-mail enviado:", response);
-                    form.reset();
-                })
-                .catch((error) => {
-                    if (statusMsg) {
-                        statusMsg.textContent = "Erro ao enviar o e-mail. Tente novamente mais tarde.";
-                        statusMsg.style.color = "red";
-                    }
-                    console.error("Erro ao enviar:", error);
-                });
+            try {
+                const response = await emailjs.sendForm(
+                    "service_fkc1i6a",
+                    "template_c4mc5up",
+                    form
+                );
+
+                statusMsg.textContent = "E-mail enviado com sucesso!";
+                statusMsg.style.color = "black";
+                console.log("E-mail enviado:", response);
+                form.reset();
+            } catch (error) {
+                statusMsg.textContent = "Erro ao enviar o e-mail. Tente novamente mais tarde.";
+                statusMsg.style.color = "red";
+                console.error("Erro ao enviar:", error);
+            }
         });
     } else {
-        console.error("Erro: Formulário não encontrado!");
+        console.error("Erro: Formulário ou elemento de status não encontrado!");
     }
 });
 
@@ -46,11 +45,6 @@ function toggleDescription(id, button) {
     const desc = document.getElementById(id);
     if (!desc) return;
 
-    if (desc.style.display === "none" || desc.style.display === "") {
-        desc.style.display = "block";
-        button.innerText = "Ler menos"; 
-    } else {
-        desc.style.display = "none";
-        button.innerText = "Ler mais";
-    }
+    desc.classList.toggle("visible");
+    button.innerText = desc.classList.contains("visible") ? "Ler menos" : "Ler mais";
 }
