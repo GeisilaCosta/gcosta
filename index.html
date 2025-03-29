@@ -1,217 +1,707 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Geisila Costa | Portfólio</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!-- Modal de Construção -->
-    <div class="modal fade" id="constructionModal" tabindex="-1" aria-labelledby="constructionModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="constructionModalLabel">Site em Construção</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Este site ainda está em construção. Faltam alguns detalhes.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-            </div>
+    <div
+      class="modal fade"
+      id="constructionModal"
+      tabindex="-1"
+      aria-labelledby="constructionModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="constructionModalLabel">
+              Site em Construção
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Este site ainda está em construção. Faltam alguns detalhes.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Fechar
+            </button>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <img src="img/imagemLlogoSemFundo.jpg" class="logo img-fluid" alt="Logo" />
-            <a class="navbar-brand" href="#">GCosta</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Mim</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="formacoes.html">Formações</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/GeisilaCosta" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mailto:geisilaportifolio@gmail.com">Contato</a></li>
-                </ul>
-            </div>
+      <div class="container">
+        <img
+          src="img/imagemLlogoSemFundo.jpg"
+          class="logo img-fluid"
+          alt="Logo"
+        />
+        <a class="navbar-brand" href="#">GCosta</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre Mim</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projetos">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#habilidades">Habilidades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="formacoes.html">Formações</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/GeisilaCosta"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:geisilaportifolio@gmail.com"
+                >Contato</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Seção Início -->
     <section id="inicio" class="hero-section d-flex align-items-center">
-        <div class="container text-center">
-            <img src="img/Imagem do WhatsApp de 2025-01-04 à(s) 09.25.45_30bb963f.jpg" alt="Geisila Costa" class="profile-img rounded-circle mb-4" data-aos="fade-up" />
-            <h1 data-aos="fade-up" data-aos-delay="200">Geisila Costa</h1>
-            <h2 data-aos="fade-up" data-aos-delay="400">Analista de Desenvolvimento de Sistemas</h2>
-            <h2 data-aos="fade-up" data-aos-delay="400">Desenvolvedora Full Stack</h2>
-            <p class="tagline" data-aos="fade-up" data-aos-delay="600">Transformando ideias em soluções digitais com tecnologia, inovação e criatividade.</p>
-            <div class="mt-4" data-aos="fade-up" data-aos-delay="800">
-                <a href="#projetos" class="btn btn-success btn-lg me-3">Projetos</a>
-                <a href="#contato" class="btn btn-outline-light btn-lg">Contato</a>
-            </div>
+      <div class="container text-center">
+        <img
+          src="img/Imagem do WhatsApp de 2025-01-04 à(s) 09.25.45_30bb963f.jpg"
+          alt="Geisila Costa"
+          class="profile-img rounded-circle mb-4"
+          data-aos="fade-up"
+        />
+        <h1 data-aos="fade-up" data-aos-delay="200">Geisila Costa</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">
+          Analista de Desenvolvimento de Sistemas
+        </h2>
+        <h2 data-aos="fade-up" data-aos-delay="400">
+          Desenvolvedora Full Stack
+        </h2>
+        <p class="tagline" data-aos="fade-up" data-aos-delay="600">
+          Transformando ideias em soluções digitais com tecnologia, inovação e
+          criatividade.
+        </p>
+        <div class="mt-4" data-aos="fade-up" data-aos-delay="800">
+          <a href="#projetos" class="btn btn-success btn-lg me-3">Projetos</a>
+          <a href="#contato" class="btn btn-outline-light btn-lg">Contato</a>
         </div>
+      </div>
     </section>
 
     <!-- Seção Download Currículo -->
     <section class="download-section text-center py-5">
-        <div class="container">
-            <a href="dowloads/GeisilaSCosta.pdf" download="GeisilaSCosta.pdf" class="btn btn-outline-danger btn-lg">Baixar Currículo em PDF</a>
-        </div>
+      <div class="container">
+        <a
+          href="dowloads/GeisilaSCosta.pdf"
+          download="GeisilaSCosta.pdf"
+          class="btn btn-outline-danger btn-lg"
+          >Baixar Currículo em PDF</a
+        >
+      </div>
     </section>
 
     <!-- Seção Sobre Mim -->
     <section id="sobre" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mim</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-right">
-                    <img src="img/logo 2.png" alt="Sobre Mim" class="img-fluid rounded" />
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <p class="lead">Sou uma profissional apaixonada por tecnologia, sempre buscando conhecimento e novidades para criar soluções inovadoras e eficientes.</p>
-                    <p>Minha jornada inclui diversos projetos que envolvem desenvolvimento full stack, web, mobile, Python, OutSystems e diversas ferramentas modernas.</p>
-                    <p>Meu objetivo é sempre buscar o equilíbrio entre estética e funcionalidade, oferecendo ótimas soluções e experiências ao usuário.</p>
-                    <p>
-                      No meu portfólio, você encontrará uma variedade de projetos que demonstram minhas habilidades e 
-                      conhecimentos. Estou sempre aberto a novos desafios e oportunidades para crescer profissionalmente e 
-                      colaborar com outras pessoas.
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mim</h2>
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right">
+            <img
+              src="img/logo 2.png"
+              alt="Sobre Mim"
+              class="img-fluid rounded"
+            />
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <p class="lead">
+              Sou uma profissional apaixonada por tecnologia, sempre buscando
+              conhecimento e novidades para criar soluções inovadoras e
+              eficientes.
+            </p>
+            <p>
+              Minha jornada inclui diversos projetos que envolvem
+              desenvolvimento full stack, web, mobile, Python, OutSystems e
+              diversas ferramentas modernas.
+            </p>
+            <p>
+              Meu objetivo é sempre buscar o equilíbrio entre estética e
+              funcionalidade, oferecendo ótimas soluções e experiências ao
+              usuário.
+            </p>
+            <p>
+              No meu portfólio, você encontrará uma variedade de projetos que
+              demonstram minhas habilidades e conhecimentos. Estou sempre aberto
+              a novos desafios e oportunidades para crescer profissionalmente e
+              colaborar com outras pessoas.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Seção Projetos -->
-    <section id="projetos" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">Projetos</h2>
-            <div class="row">
+    <section  id="transicao"></section>
 
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+    <!-- Seção Projetos -->
+
+    <section id="projetos" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Projetos</h2>
+        <h4 class="text-center mb-4" data-aos="fade-up">
+          Alguns dos Projetos Desenvolvidos
+        </h4>
+        <div class="row">
+          <!-- Projetos 1 -->
+          <div class= "col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/monitore.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">Monitore</h5>
+                <p class="card-text">
+                  monitore é um sistema web que fornece previsões meteorológicas
+                  e informações sobre o nível de água para ajudar comunidades a
+                  se prepararem para desastres naturais. Utiliza HTML, CSS,
+                  JavaScript, a API OpenWeatherMap e Leaflet.js para fornecer
+                  dados meteorológicos e mapas interativos
+                </p>
+                <div id="desc1" class="hidden-description">
+                  <p>
+                    Visão Geral O sistema exibe dados meteorológicos e
+                    informações de risco de enchentes em tempo real através de
+                    um mapa interativo, permitindo que os usuários visualizem
+                    regiões de risco e detalhes climáticos. Funcionalidades
+                    Dados Meteorológicos em Tempo Real: Informações atualizadas
+                    sobre o clima, como temperatura, umidade e velocidade do
+                    vento. Alertas de Enchentes: Notificações sobre condições
+                    que podem levar a enchentes. Mapa Interativo: Visualização
+                    de áreas de risco e detalhes geográficos. Visualização de
+                    Níveis de Água: Dados sobre níveis de água e alertas em
+                    locais propensos a enchentes. Tecnologias Utilizadas HTML,
+                    CSS e JavaScript: Para estrutura, estilo e interatividade.
+                    OpenWeatherMap API: Para dados meteorológicos em tempo real.
+                    Leaflet.js: Para mapas interativos. Futuras Implementações
+                    Notificações baseadas em geolocalização. Camadas adicionais
+                    de mapa para previsões detalhadas e dados históricos.
+                    Integração com redes sociais para compartilhamento de
+                    alertas
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc1', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 2 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source
+                  src="videos/Gravação de Tela 2024-10-16 165413.mp4"
+                  type="video/mp4"
+                />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">Gam3r Store</h5>
+                <p class="card-text">
+                  Este é um projeto de e-commerce desenvolvido com tecnologias
+                  modernas e eficientes para criar uma plataforma robusta e
+                  escalável. O objetivo é fornecer uma interface rápida e
+                  intuitiva para usuários, enquanto o backend gerencia dados de
+                  forma segura e eficiente
+                </p>
+                <div id="desc2" class="hidden-description">
+                  <p>
+                    Tecnologias Utilizadas<br />
+                    React: Para a construção da interface do usuário, oferecendo
+                    uma experiência interativa e responsiva.<br />
+                    Next.js: Framework React utilizado para renderização do lado
+                    do servidor (SSR) e geração de páginas estáticas, otimizando
+                    o SEO e o desempenho.<br />
+                    NestJS: Framework de backend Node.js eficiente para
+                    construir uma API robusta e escalável com TypeScript.<br />
+                    Tailwind CSS: Biblioteca de CSS utility-first para
+                    estilização rápida e customizável.<br />
+                    Prisma: ORM para gerenciamento de banco de dados,
+                    simplificando as consultas e mantendo a consistência dos
+                    dados.<br />
+                    PostgreSQL: Banco de dados relacional para armazenamento
+                    seguro e eficiente das informações de produtos, usuários e
+                    pedidos.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc2', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 3 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/hack.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">Vida Segura</h5>
+                <p class="card-text">
+                  Conscientização sobre Enchentes no Rio Grande do Sul 🌊
+                  Objetivo: O projeto visa educar e preparar as comunidades do
+                  Rio Grande do Sul para enfrentar enchentes, fornecendo
+                  informações claras e acessíveis sobre como agir antes, durante
+                  e depois desses eventos, minimizando riscos e danos.
+                </p>
+                <div id="desc3" class="hidden-description">
+                  <p>
+                    Problema: Muitas comunidades não têm acesso a informações e
+                    orientações adequadas para se preparar e lidar com
+                    enchentes, resultando em grandes prejuízos e riscos à vida.
+                    Funcionalidades: Dicas de Prevenção: Ações práticas para
+                    minimizar riscos antes de uma enchente. Instruções de
+                    Segurança: Passos detalhados para garantir segurança durante
+                    e após uma enchente. Mapas das Áreas de Risco: Visualização
+                    das regiões mais vulneráveis no RS, categorizadas por níveis
+                    de risco. Recursos e Contatos Locais: Lista de contatos
+                    importantes para facilitar o acesso a ajuda. Links Úteis e
+                    Fórum: Recursos adicionais e espaço para interação entre
+                    usuários. Tecnologias Utilizadas: HTML e CSS: Para uma
+                    interface leve, acessível e responsiva. Imagens e Mapas:
+                    Fornecem uma visão clara das áreas de risco sem
+                    sobrecarregar a página. Estrutura do Projeto: /pages:
+                    Páginas principais da plataforma. /img: Imagens usadas no
+                    site. styles.css: Arquivo de estilos para design
+                    consistente. Possíveis Melhorias Futuras: Área de Relato de
+                    Experiências: Para compartilhamento de relatos e dicas
+                    pessoais. Integração com Redes Sociais: Para expandir o
+                    alcance e aumentar a conscientização. Impacto Social: A
+                    plataforma busca capacitar e educar as comunidades,
+                    contribuindo para a segurança e resiliência das pessoas em
+                    áreas vulneráveis.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc3', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/hackRecode.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 4 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/phito.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">PhitoTec</h5>
+                <p class="card-text">
+                  PhytoTec é uma aplicação full-stack para uma farmácia de
+                  plantas medicinais. O objetivo é fornecer uma interface
+                  intuitiva para listar e cadastrar plantas medicinais com todas
+                  as suas informações relevantes
+                </p>
+                <div id="desc4" class="hidden-description">
+                  <p>
+                    ## Tecnologias Utilizadas ### Frontend: - React - Vite -
+                    TypeScript - Axios - React Router - Bootstrap -
+                    React-Bootstrap ### Backend: - Java - Spring Boot - Spring
+                    Data JPA - H2 Database (dev) - PostgreSQL (prod)
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc4', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 5 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/info.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">Influencers4You</h5>
+                <p class="card-text">
+                  Influence4You é uma plataforma de marketing de influenciadores
+                  que conecta empresas e influenciadores para colaborações em
+                  campanhas. Com o Influence4You.
+                </p>
+                <div id="desc5" class="hidden-description">
+                  <p>
+                    As empresas podem encontrar influenciadores relevantes para
+                    promover seus produtos e serviços, enquanto os
+                    influenciadores podem descobrir oportunidades de parceria.
+                    Tecnologias Utilizadas Java: Usamos Java para o backend e a
+                    lógica de negócios. TypeScript: O frontend é construído com
+                    TypeScript e React. CSS: Estilizamos a interface com CSS e
+                    componentes reutilizáveis. Funcionalidades Principais
+                    Pesquisa de Influenciadores: Os usuários podem pesquisar
+                    influenciadores com base em nichos, seguidores, localização
+                    e outras métricas. Os influenciadores têm perfis detalhados
+                    com informações sobre suas áreas de interesse, público-alvo
+                    e taxas de colaboração. Gestão de Projetos: As empresas
+                    podem criar projetos e convidar influenciadores para
+                    colaborar. Os influenciadores podem aceitar ou recusar
+                    convites e acompanhar o progresso dos projetos.
+                    Monitoramento de Campanhas: As empresas podem rastrear o
+                    desempenho das campanhas, incluindo métricas como alcance,
+                    engajamento e conversões. Os influenciadores podem ver o
+                    desempenho de suas postagens e receber feedback das
+                    empresas.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc5', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 6 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/barber.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">BarberShop</h5>
+                <p class="card-text">
+                  Descrição Geral: O Projeto FSW Barber é uma aplicação web
+                  desenvolvida com Next.js e React, destinada a ser uma
+                  plataforma para barbearias. A aplicação inclui uma página que
+                  lista as barbearias cadastradas com base em parâmetros de
+                  busca.
+                </p>
+                <div id="desc6" class="hidden-description">
+                  <p>
+                    Componentes Principais: Header: Renderiza o logotipo da
+                    aplicação e um botão de menu lateral que ativa o componente
+                    SidebarSheet. Search: Permite ao usuário buscar barbearias
+                    por título ou serviço. BarbershopItem: Renderiza informações
+                    e serviços de uma barbearia individual. BarbershopsPage:
+                    Página principal que lista as barbearias cadastradas com
+                    base em parâmetros de busca. Funcionalidades: Listagem de
+                    barbearias com base em parâmetros de busca (título ou
+                    serviço). Componente de busca para encontrar barbearias
+                    específicas. Cabeçalho com logotipo e menu lateral.
+                    Tecnologias Utilizadas: Next.js: Framework para
+                    desenvolvimento de aplicações web com React. React:
+                    Biblioteca JavaScript para construção de interfaces de
+                    usuário. Prisma: ORM para interação com o banco de dados.
+                    TypeScript: Linguagem de programação para desenvolvimento
+                    web. Banco de Dados: Utiliza Prisma para interagir com o
+                    banco de dados, armazenando informações das barbearias, como
+                    nomes e serviços oferecidos. Arquitetura: Baseada em
+                    componentes React, cada um responsável por uma
+                    funcionalidade específica. A página principal é o
+                    BarbershopsPage, com o Header gerenciando o cabeçalho e o
+                    Search facilitando a busca de barbearias.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc6', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 7 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/cardapios.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">CardápioON</h5>
+                <p class="card-text">
+                  Este projeto é um aplicativo web que permite a visualização e
+                  cadastro de itens em um cardápio.
+                </p>
+                <div id="desc7" class="hidden-description">
+                  <p>
+                    Ele foi desenvolvido utilizando React no frontend e Spring
+                    Boot no backend. Funcionalidades: Visualização de itens do
+                    cardápio. Cadastro de novos itens no cardápio. Interface
+                    intuitiva e responsiva. Tecnologias Utilizadas Frontend
+                    React TypeScript Vite React Query CSS Modules Backend Spring
+                    Boot Spring Data JPA H2 Database PostgreSQL
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc7', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 8 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="videos/green.mp4" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">GreenShoes</h5>
+                <p class="card-text">
+                  Bem-vindo ao repositório do projeto Green Shoes! Este é um
+                  e-commerce fictício de calçados elegantes e sustentáveis.
+                </p>
+                <div id="desc8" class="hidden-description">
+                  <p>
+                    Visão Geral O Green Shoes é um projeto desenvolvido com
+                    HTML, CSS e JavaScript. Ele inclui as seguintes
+                    funcionalidades: Catálogo de Produtos: Exiba os calçados
+                    disponíveis, organizados por categorias (feminino,
+                    masculino, acessórios). Detalhes do Produto: Cada produto
+                    tem uma página de detalhes com informações como preço,
+                    descrição e imagens. Carrinho de Compras: Os usuários podem
+                    adicionar produtos ao carrinho e finalizar a compra.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc8', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Projetos 9 -->
+          <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <video class="card-img-top img-fluid" controls>
+                <source src="" type="video/mp4" />
+                Seu navegador não suporta o elemento de vídeo.
+              </video>
+              <div class="card-body">
+                <h5 class="card-title">SerraTec</h5>
+                <p class="card-text">
+                  Bem-vindo ao repositório do projeto Serra Tec! Este é um
+                  e-commerce fictício de produtos eletronicos.
+                </p>
+                <div id="desc9" class="hidden-description">
+                  <p>
+                    Visão Geral O Serra Tec é um projeto desenvolvido com React
+                    Vite, CSS e routes... Ele inclui as seguintes
+                    funcionalidades: Catálogo de Produtos. Carrinho de Compras:
+                    Os usuários podem adicionar produtos ao carrinho e finalizar
+                    a compra.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-link"
+                  onclick="toggleDescription('desc9', this)"
+                >
+                  Ler mais
+                </button>
+                <a
+                  href="https://github.com/GeisilaCosta/monitore.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-link"
+                  >Repositório</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Adicione mais projetos aqui -->
+
+          <!-- Projetos 5 -->
+          <!-- <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card">
                         <video class="card-img-top img-fluid" controls>
-                            <source src="videos/monitore.mp4" type="video/mp4" />
+                            <source src="" type="video/mp4" />
                             Seu navegador não suporta o elemento de vídeo.
                         </video>
                         <div class="card-body">
-                            <h5 class="card-title">Monitore</h5>
-                            <p class="card-text">monitore é um sistema web que fornece previsões meteorológicas e informações sobre o nível de água para ajudar comunidades a se prepararem para desastres naturais. Utiliza HTML, CSS, JavaScript, a API OpenWeatherMap e Leaflet.js para fornecer dados meteorológicos e mapas interativos</p>
+                            <h5 class="card-title">Nome</h5>
+                            <p class="card-text">descricao</p>
                             <div id="desc1" class="hidden-description">
-                                <p> Visão Geral
-                                  O sistema exibe dados meteorológicos e informações de risco de enchentes em tempo real através de um mapa interativo, permitindo que os usuários visualizem regiões de risco e detalhes climáticos.
-                                  
-                                  Funcionalidades
-                                  Dados Meteorológicos em Tempo Real: Informações atualizadas sobre o clima, como temperatura, umidade e velocidade do vento.
-                                  Alertas de Enchentes: Notificações sobre condições que podem levar a enchentes.
-                                  Mapa Interativo: Visualização de áreas de risco e detalhes geográficos.
-                                  Visualização de Níveis de Água: Dados sobre níveis de água e alertas em locais propensos a enchentes.
-                                  Tecnologias Utilizadas
-                                  HTML, CSS e JavaScript: Para estrutura, estilo e interatividade.
-                                  OpenWeatherMap API: Para dados meteorológicos em tempo real.
-                                  Leaflet.js: Para mapas interativos.
-                                  Futuras Implementações
-                                  Notificações baseadas em geolocalização.
-                                  Camadas adicionais de mapa para previsões detalhadas e dados históricos.
-                                  Integração com redes sociais para compartilhamento de alertas</p>
+                                <p>Descrição detalhada do projeto</p>
                             </div>
                             <button class="btn btn-link" onclick="toggleDescription('desc1', this)">Ler mais</button>
                             <a href="https://github.com/GeisilaCosta/monitore.git" target="_blank" rel="noopener noreferrer" class="btn btn-link">Repositório</a>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                  <div class="card">
-                      <video class="card-img-top img-fluid" controls>
-                          <source src="videos/Gravação de Tela 2024-10-16 165413.mp4" type="video/mp4" />
-                          Seu navegador não suporta o elemento de vídeo.
-                      </video>
-                      <div class="card-body">
-                          <h5 class="card-title">Gam3r Store</h5>
-                          <p class="card-text">Este é um projeto de e-commerce desenvolvido com tecnologias modernas e eficientes para criar uma plataforma robusta e escalável. O objetivo é fornecer uma interface rápida e intuitiva para usuários, enquanto o backend gerencia dados de forma segura e eficiente</p>
-                          <div id="desc1" class="hidden-description">
-                              <p>Tecnologias Utilizadas<br>
-                                React: Para a construção da interface do usuário, oferecendo uma experiência interativa e responsiva.<br>
-                                Next.js: Framework React utilizado para renderização do lado do servidor (SSR) e geração de páginas estáticas, otimizando o SEO e o desempenho.<br>
-                                NestJS: Framework de backend Node.js eficiente para construir uma API robusta e escalável com TypeScript.<br>
-                                Tailwind CSS: Biblioteca de CSS utility-first para estilização rápida e customizável.<br>
-                                Prisma: ORM para gerenciamento de banco de dados, simplificando as consultas e mantendo a consistência dos dados.<br>
-                                PostgreSQL: Banco de dados relacional para armazenamento seguro e eficiente das informações de produtos, usuários e pedidos.</p>
-                          </div>
-                          <button class="btn btn-link" onclick="toggleDescription('desc1', this)">Ler mais</button>
-                          <a href="https://github.com/GeisilaCosta/monitore.git" target="_blank" rel="noopener noreferrer" class="btn btn-link">Repositório</a>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                    <video class="card-img-top img-fluid" controls>
-                        <source src="videos/monitore.mp4" type="video/mp4" />
-                        Seu navegador não suporta o elemento de vídeo.
-                    </video>
-                    <div class="card-body">
-                        <h5 class="card-title">Monitore</h5>
-                        <p class="card-text">Sistema web para previsões meteorológicas e monitoramento de enchentes.</p>
-                        <div id="desc1" class="hidden-description">
-                            <p>Descrição detalhada do projeto Monitore...</p>
-                        </div>
-                        <button class="btn btn-link" onclick="toggleDescription('desc1', this)">Ler mais</button>
-                        <a href="https://github.com/GeisilaCosta/monitore.git" target="_blank" rel="noopener noreferrer" class="btn btn-link">Repositório</a>
-                    </div>
-                </div>
-            </div>
-                <!-- Adicione mais projetos aqui -->
-            </div>
+                </div> -->
         </div>
+      </div>
     </section>
 
     <!-- Seção Habilidades -->
     <section id="habilidades" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4" data-aos="fade-up">Habilidades</h2>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <h4>Tecnologias</h4>
-                    <ul>
-                        <li>Python (Análise de Dados e IA)</li>
-                        <li>OutSystems (Low-Code)</li>
-                        <li>JavaScript, React, Node.js</li>
-                        <li>HTML, CSS, Bootstrap</li>
-                    </ul>
-                </div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <h4>Soft Skills</h4>
-                    <ul>
-                        <li>Comunicação</li>
-                        <li>Trabalho em Equipe</li>
-                        <li>Resolução de Problemas</li>
-                        <li>Inovação</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-up">Habilidades</h2>
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <h4>Tecnologias</h4>
+            <ul>
+              <li>Python (Análise de Dados e IA)</li>
+              <li>OutSystems (Low-Code)</li>
+              <li>JavaScript, React, Node.js</li>
+              <li>HTML, CSS, Bootstrap</li>
+            </ul>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <h4>Soft Skills</h4>
+            <ul>
+              <li>Comunicação</li>
+              <li>Trabalho em Equipe</li>
+              <li>Resolução de Problemas</li>
+              <li>Inovação</li>
+            </ul>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Seção Contato -->
-    <section id="contato" class="py-5 bg-light">
+    <!-- <section id="contato" class="py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-4" data-aos="fade-up">Contato</h2>
             <form id="contactForm" data-aos="fade-up" data-aos-delay="200">
@@ -231,20 +721,53 @@
             </form>
             <p id="status-message" class="mt-3"></p>
         </div>
-    </section>
+    </section> -->
 
     <!-- Rodapé -->
     <footer class="bg-dark py-3 text-center">
-        <div class="container">
-            <p class="text-light mb-0">&copy; 2025 Desenvolvido por Geisila Costa. Todos os direitos reservados.</p>
-            <div class="social-icons mt-3">
-                <a href="https://www.linkedin.com/in/geisila-costa-7b3b2b237/" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/GeisilaCosta" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/geisilasilvadacosta" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/geisila.silvadacosta" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@geisilacosta21?_t=ZM-8up9mEhADG3&_r=1" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-tiktok"></i></a>
-            </div>
+      <div class="container">
+        <p class="text-light mb-0">
+          &copy; 2025 Desenvolvido por Geisila Costa. Todos os direitos
+          reservados.
+        </p>
+        <div class="social-icons mt-3">
+          <a
+            href="https://www.linkedin.com/in/geisila-costa-7b3b2b237/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/GeisilaCosta"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/geisilasilvadacosta"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/geisila.silvadacosta"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.tiktok.com/@geisilacosta21?_t=ZM-8up9mEhADG3&_r=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            ><i class="fab fa-tiktok"></i
+          ></a>
         </div>
+      </div>
     </footer>
 
     <!-- Bootstrap JS e Dependências -->
@@ -257,14 +780,16 @@
     <!-- JS Personalizado -->
     <script src="scripts.js"></script>
     <script>
-        // Inicializa AOS
-        AOS.init();
+      // Inicializa AOS
+      AOS.init();
 
-        // Exibe o modal de construção ao carregar a página
-        window.onload = function () {
-            const myModal = new bootstrap.Modal(document.getElementById("constructionModal"));
-            myModal.show();
-        };
+      // Exibe o modal de construção ao carregar a página
+      window.onload = function () {
+        const myModal = new bootstrap.Modal(
+          document.getElementById("constructionModal")
+        );
+        myModal.show();
+      };
     </script>
-</body>
+  </body>
 </html>
