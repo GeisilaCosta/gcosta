@@ -102,15 +102,22 @@ section {
   background-color: #1a1a1a !important; /* Fundo escuro */
   padding: 20px; /* Adiciona um pouco de espaço interno */
 }
+
+#formacoes{
+  margin-top: 20px;
+  background: rgb(19, 19, 19);
+  color: #8b8a8a;
+}
+
 .card {
   transition: transform 0.3s;
   max-width: 100%;
   border-radius: 3px 3px 3px 3px !important;
-  border: 10px solid transparent; /* Remove o contorno padrão */
-  border-image: linear-gradient(to right, #4b6cb7,rgb(3, 218, 247), #d445d4) 1; /* Degradê de azul e roxo */
-  box-shadow: 0 0 5px rgba(75, 108, 183, 0.5), 0 0 10px rgba(3, 218, 247, 0.5), 0 0 15px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
-  box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
-  box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); Sombra para dar impressão de luz */
+  border: 3px solid transparent; /* Remove o contorno padrão */
+  border-image: linear-gradient(to right,rgb(3, 218, 247), rgb(187, 3, 243), #4b6cb7) 1; /* Degradê de azul e roxo */
+  /* box-shadow: 0 0 5px rgba(75, 108, 183, 0.5), 0 0 10px rgba(3, 218, 247, 0.5), 0 0 15px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
+  /* box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
+  /*box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); Sombra para dar impressão de luz */
 
 
 
@@ -210,3 +217,4 @@ footer p {
 
 .fade-in.loaded {
   opacity: 1;
+}
