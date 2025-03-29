@@ -1,191 +1,212 @@
 /* Estilos Globais */
-html, body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* Container Principal */
 .container-principal {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* Navbar */
 .navbar {
-    max-width: 100%;
-    overflow: hidden;
-    padding: 0.5rem 1rem;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
 }
 
 /* Logo */
 .logo {
-    width: 40px;
-    height: auto;
-    margin-right: 10px;
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
 }
 
 /* Hero Section */
 .hero-section {
-    width: 100%;
-    height: auto;
-    background: linear-gradient(rgba(95, 95, 95, 0.877), rgba(8, 8, 8, 0.863)), url('img/codigos.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(rgba(95, 95, 95, 0.877), rgba(8, 8, 8, 0.863)),
+    url("img/codigos.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 0;
 }
 
 .hero-section img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    max-width: 100%;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
-    border: 4px solid #fff;
+  width: 120px;
+  height: 120px;
+  border: 4px solid #fff;
 }
 
 .tagline {
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 1rem;
 }
 
 /* Botões */
 .btn-outline-light {
-    border-color: #fff;
-    color: #fff;
+  border-color: #fff;
+  color: #fff;
 }
 
 .btn-outline-light:hover {
-    background-color: #fff;
-    color: #ff7b00;
+  background-color: #fff;
+  color: #ff7b00;
 }
 
 /* Seções */
 section {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 /* Sobre Mim */
 #sobre-mim-image {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
+/* #transicao {
+  background: linear-gradient(rgba(241, 241, 241, 0.473), rgb(8, 8, 8));
+  height: 10px;
+  
+} */
+
 /* Cards de Projetos */
+#projetos {
+  color: rgb(136, 138, 139);
+  background-color: #1a1a1a !important; /* Fundo escuro */
+  padding: 20px; /* Adiciona um pouco de espaço interno */
+}
 .card {
-    transition: transform 0.3s;
-    max-width: 100%;
+  transition: transform 0.3s;
+  max-width: 100%;
+  border-radius: 3px 3px 3px 3px !important;
+  border: 10px solid transparent; /* Remove o contorno padrão */
+  border-image: linear-gradient(to right, #4b6cb7,rgb(3, 218, 247), #d445d4) 1; /* Degradê de azul e roxo */
+  box-shadow: 0 0 5px rgba(75, 108, 183, 0.5), 0 0 10px rgba(3, 218, 247, 0.5), 0 0 15px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
+  box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
+  box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); Sombra para dar impressão de luz */
+
+
+
 }
 
 .card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 /* Descrição alternada */
 .hidden-description {
-    display: none;
+  display: none;
 }
 
 .hidden-description.visible {
-    display: block;
+  display: block;
 }
 
 /* Seção de Download */
 .download-section {
-    margin-top: 10px;
-    padding: 20px;
-    border: 1px dashed #fc0404;
-    border-radius: 5px;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px dashed #fc0404;
+  border-radius: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Ícones Sociais */
 .social-icons {
-    font-size: 1.5rem;
-    margin-right: 10px;
+  font-size: 1.5rem;
+  margin-right: 10px;
 }
 
 .social-link {
-    color: #8a8787;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #8a8787;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .social-link:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 /* Rodapé */
 footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
 }
 
 /* Media Queries para dispositivos menores */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.9rem;
-    }
+  .navbar {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+  }
 
-    .hero-section {
-        padding: 80px 0;
-    }
+  .hero-section {
+    padding: 80px 0;
+  }
 
-    .hero-section img {
-        width: 100px;
-        height: 100px;
-    }
+  .hero-section img {
+    width: 100px;
+    height: 100px;
+  }
 
-    .tagline {
-        font-size: 1.2rem;
-    }
+  .tagline {
+    font-size: 1.2rem;
+  }
 
-    section {
-        padding: 30px 0;
-    }
+  section {
+    padding: 30px 0;
+  }
 
-    #sobre-mim-image {
-        width: 100%;
-        max-width: 300px;
-    }
+  #sobre-mim-image {
+    width: 100%;
+    max-width: 300px;
+  }
 
-    .download-section {
-        padding: 15px;
-    }
+  .download-section {
+    padding: 15px;
+  }
 }
 
 /* Animação de carregamento */
 .fade-in {
-    opacity: 0;
-    transition: opacity 1s;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .fade-in.loaded {
-    opacity: 1;
-}
+  opacity: 1;
