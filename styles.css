@@ -3,7 +3,7 @@ html,
 body {
   font-family: "Roboto", sans-serif;
   background-color: #f8f9fa;
-  color: #333;
+  color: #696969;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -73,7 +73,7 @@ body {
 
 .btn-outline-light:hover {
   background-color: #fff;
-  color: #ff7b00;
+  color: #0044ff;
 }
 
 /* Seções */
@@ -82,6 +82,9 @@ section {
 }
 
 /* Sobre Mim */
+#sobre {
+  background-color: #0c0c0c;
+}
 #sobre-mim-image {
   width: 100%;
   max-width: 400px;
@@ -89,22 +92,124 @@ section {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+.carousel-item {
+  background-color: rgba(255, 255, 255, 0.1); /* ajuda a visualizar */
+  color: #00ffff;
+}
 
-/* #transicao {
-  background: linear-gradient(rgba(241, 241, 241, 0.473), rgb(8, 8, 8));
-  height: 10px;
-  
-} */
+/* Animada */
+.tech-carousel-wrapper {
+  overflow: hidden;
+  background: #58027a; 
+  padding: 20px 0;
+}
+
+.tech-carousel {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.tech-slide {
+  display: flex;
+  gap: 40px;
+  padding: 0 40px;
+}
+
+.tech-slide i {
+  font-size: 40px;
+  color: #00b7ff;
+  transition: transform 0.3s;
+}
+
+.tech-slide i:hover {
+  transform: scale(1.2);
+}
+
+/* Animação de deslizamento */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Animacao 3D*/
+.tech-carousel-3d {
+  width: 300px;
+  height: 300px;
+  margin: 100px auto;
+  perspective: 1000px;
+}
+
+.carousel3d {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center -150px;
+  font-size: 40px;
+  color: #007bff;
+  transition: transform 0.5s;
+}
+
+/* Distribuição dos ícones em círculo */
+.carousel-item:nth-child(1) { transform: rotateY(0deg)   translateZ(150px); }
+.carousel-item:nth-child(2) { transform: rotateY(45deg)  translateZ(150px); }
+.carousel-item:nth-child(3) { transform: rotateY(90deg)  translateZ(150px); }
+.carousel-item:nth-child(4) { transform: rotateY(135deg) translateZ(150px); }
+.carousel-item:nth-child(5) { transform: rotateY(180deg) translateZ(150px); }
+.carousel-item:nth-child(6) { transform: rotateY(225deg) translateZ(150px); }
+.carousel-item:nth-child(7) { transform: rotateY(270deg) translateZ(150px); }
+.carousel-item:nth-child(8) { transform: rotateY(315deg) translateZ(150px); }
+
+@keyframes rotate {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+@media (max-width: 576px) {
+  .tech-carousel-3d {
+    width: 200px;
+    height: 200px;
+  }
+
+  .carousel-item {
+    font-size: 24px; /* ícones menores */
+    transform-origin: center center -100px; /* ajusta a profundidade do 3D */
+  }
+
+  /* Atualize os ângulos com nova distância */
+  .carousel-item:nth-child(1) { transform: rotateY(0deg)   translateZ(100px); }
+  .carousel-item:nth-child(2) { transform: rotateY(45deg)  translateZ(100px); }
+  .carousel-item:nth-child(3) { transform: rotateY(90deg)  translateZ(100px); }
+  .carousel-item:nth-child(4) { transform: rotateY(135deg) translateZ(100px); }
+  .carousel-item:nth-child(5) { transform: rotateY(180deg) translateZ(100px); }
+  .carousel-item:nth-child(6) { transform: rotateY(225deg) translateZ(100px); }
+  .carousel-item:nth-child(7) { transform: rotateY(270deg) translateZ(100px); }
+  .carousel-item:nth-child(8) { transform: rotateY(315deg) translateZ(100px); }
+}
+
 
 /* Cards de Projetos */
 #projetos {
+  margin-top: 0px;
   color: rgb(136, 138, 139);
   background-color: #1a1a1a !important; /* Fundo escuro */
   padding: 20px; /* Adiciona um pouco de espaço interno */
 }
 
 #formacoes{
-  margin-top: 20px;
+  margin-top: 0px;
   background: rgb(19, 19, 19);
   color: #8b8a8a;
 }
@@ -138,9 +243,12 @@ section {
 
 /* Seção de Download */
 .download-section {
-  margin-top: 10px;
+  background-color: #000000;
+  color: #8b8a8a;
+  text-align: center;
+  margin-top: 0px;
   padding: 20px;
-  border: 1px dashed #fc0404;
+  border: 1px dashed #0f0f0f;
   border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
