@@ -83,7 +83,7 @@ section {
 
 /* Sobre Mim */
 #sobre {
-  background-color: #0c0c0c;
+  background-color: #020202;
 }
 #sobre-mim-image {
   width: 100%;
@@ -95,6 +95,45 @@ section {
 .carousel-item {
   background-color: rgba(255, 255, 255, 0.1); /* ajuda a visualizar */
   color: #00ffff;
+}
+
+/* Efeitos 3D combinados com AOS */
+.img-3d-container {
+  perspective: 1000px;
+  display: inline-block;
+}
+
+.img-3d {
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px -5px rgba(195, 0, 255, 0.3);
+  /* Efeito de flutuação suave quando não está hover */
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Ajuste para quando a animação AOS terminar */
+[data-aos="flip-left"].aos-animate .img-3d,
+[data-aos="zoom-in"].aos-animate .img-3d {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Efeito 3D no hover */
+.img-3d:hover {
+  transform: perspective(1000px) rotateY(15deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 0 30px rgba(174, 0, 255, 0.8);
+  animation: none; /* Remove a flutuação durante o hover */
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* Animada */
