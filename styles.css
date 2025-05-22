@@ -3,7 +3,7 @@ html,
 body {
   font-family: "Roboto", sans-serif;
   background-color: #070707;
-  color: #696969;
+  color: #888888;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -569,7 +569,7 @@ background-color: #111111 !important;
 #card-formacoes {
   transition: transform 0.3s;
   max-width: 100%;
-  background-color: #bdbcbc65;
+  background-color: #31313165;
   border: 2px solid transparent; /* Remove o contorno padrão */
   border-image: linear-gradient(to right,rgb(3, 218, 247), rgb(187, 3, 243), #4b6cb7) 1; /* Degradê de azul e roxo */
   /* box-shadow: 0 0 5px rgba(75, 108, 183, 0.5), 0 0 10px rgba(3, 218, 247, 0.5), 0 0 15px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
