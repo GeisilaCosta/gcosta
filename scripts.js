@@ -5,8 +5,26 @@
         heroSection.classList.add("fade-in");
         setTimeout(() => {
             heroSection.classList.add("loaded");
-        }, 500);
+        }, 200);
     }
+
+    // Alternar entre frente e verso dos diplomas
+document.querySelectorAll('.diploma-carousel').forEach(carousel => {
+  const images = carousel.querySelectorAll('img');
+  if (images.length > 1) {
+    images[1].style.display = 'none';
+    
+    carousel.addEventListener('click', () => {
+      images.forEach(img => {
+        img.style.display = img.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+    
+    // Adiciona indicação de que é clicável
+    carousel.style.cursor = 'pointer';
+    carousel.title = 'Clique para ver o verso';
+  }
+});
 
     // Texto rotativo para as profissões
 class TxtRotate {
