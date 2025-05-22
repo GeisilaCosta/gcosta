@@ -128,31 +128,48 @@
     </nav>
 
     <!-- Seção Início -->
-    <section id="inicio" class="hero-section d-flex align-items-center">
-      <div class="container text-center">
+<section id="inicio" class="hero-section">
+  <div class="container text-center">
+    <!-- Elemento 3D para a foto de perfil -->
+    <div class="profile-3d-container" data-aos="fade-up">
+      <div class="profile-3d">
         <img
           src="img/Imagem do WhatsApp de 2025-01-04 à(s) 09.25.45_30bb963f.jpg"
           alt="Geisila Costa"
-          class="profile-img rounded-circle mb-4"
-          data-aos="fade-up"
+          class="profile-img"
         />
-        <h1 data-aos="fade-up" data-aos-delay="200">Geisila Costa</h1>
-        <h2 data-aos="fade-up" data-aos-delay="400">
-          Analista de Desenvolvimento de Sistemas
-        </h2>
-        <h2 data-aos="fade-up" data-aos-delay="400">
-          Desenvolvedora Full Stack
-        </h2>
-        <p class="tagline" data-aos="fade-up" data-aos-delay="600">
-          Transformando ideias em soluções digitais com tecnologia, inovação e
-          criatividade.
-        </p>
-        <div class="mt-4" data-aos="fade-up" data-aos-delay="800">
-          <a href="#projetos" class="btn btn-outline-info btn-lg me-3">Projetos</a>
-          <a href="https://api.whatsapp.com/send?phone=+5524988362454&text=Olá, obrigado pelo contato! Como podemos ajudá-lo hoje?" target="_blank" class="btn btn-outline-info btn-lg">Contato</a>
-        </div>
       </div>
-    </section>
+    </div>
+    
+    <h1 data-aos="fade-up" data-aos-delay="200">Geisila Costa</h1>
+    <div class="profession-container" data-aos="fade-up" data-aos-delay="400">
+      <h2 class="profession-text">
+        <span class="txt-rotate" data-period="2000" data-rotate='[ "Analista de Desenvolvimento de Sistemas", "Desenvolvedora Full Stack", "Especialista em Front-end", "Especialista em Back-end" ]'></span>
+      </h2>
+    </div>
+    
+    <p class="tagline" data-aos="fade-up" data-aos-delay="600">
+      Transformando ideias em soluções digitais com tecnologia, inovação e criatividade.
+    </p>
+    
+    <div class="mt-4" data-aos="fade-up" data-aos-delay="800">
+      <a href="#projetos" class="btn btn-outline-info btn-lg me-3 btn-hover-effect">Projetos</a>
+      <a href="https://api.whatsapp.com/send?phone=+5524988362454&text=Olá, obrigado pelo contato! Como podemos ajudá-lo hoje?" target="_blank" class="btn btn-outline-info btn-lg btn-hover-effect">Contato</a>
+    </div>
+    
+    <!-- Seta animada para próxima seção -->
+    <a href="#sobre" class="scroll-down left-align">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <div class="arrows">
+        <span class="arrow arrow-first"></span>
+        <span class="arrow arrow-second"></span>
+        <span class="arrow arrow-third"></span>
+      </div>
+    </a>
+  </div>
+</section>
 
     <!-- Seção Download Currículo -->
     <section class="download-section text-center py-5">
@@ -172,12 +189,11 @@
         <h2 class="text-center mb-4" data-aos="fade-up">Sobre Mim</h2>
         <div class="row">
           <div class="col-md-6" data-aos="fade-right">
-           <div class="col-md-6" data-aos="flip-left" data-aos-duration="1100">
-  <div class="img-3d-container">
-    <img src="img/Logo2.png" alt="Sobre Mim" class="img-fluid rounded img-3d">
-  </div>
-  
-</div>
+            <img
+              src="img/Logo2.png"
+              alt="Sobre Mim"
+              class="img-fluid rounded"
+            />
           </div>
           <div class="col-md-6" data-aos="fade-left">
             <p class="lead" style="font-size: 15px;">
@@ -744,101 +760,174 @@
       </div>
     </section>
 
-    <!-- Seção Habilidades -->
-    <section id="habilidades" class="py-5 bg-black">
-      <div class="container">
-        <h2 class="text-center mb-4 bg-info" data-aos="fade-up">Habilidades</h2>
-        <div class="row">
-
-          <div class="col-md-6 " data-aos="fade-up" data-aos-delay="200">
-            <h4>Hard Skills</h4>
-            <ul>
-              <li>Python (Análise de Dados, Machine Learning, IA...)</li>
-              <li>OutSystems (Low-Code)</li>
-              <li>JavaScript, React, Node.js...</li>
-              <li>HTML, CSS, Bootstrap...</li>
-              <li>Git, GitHub...</li>
-              <li>SQL, PostgreSQL...</li>
-              <li>Java, Spring Boot...</li>
-            </ul>
-          </div>
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <h4>Soft Skills</h4>
-            <ul>
-              <li>Comunicação</li>
-              <li>Trabalho em Equipe</li>
-              <li>Resolução de Problemas</li>
-              <li>Inovação</li>
-              <li>Flexibilidade</li>
-              <li>Comprometimento</li>
-              <li>Proatividade</li>
-              <li>Autonomia</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção servicoss -->
-    <section id="servicos" class="py-5 bg-black">
-        <div class="container">
-          <h2 class="text-center mb-4 bg-info data-aos="fade-up">Serviços</h2>
-          <div class="row">
-  
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <h1> ----------🌐----------</h1>
-              <h4> Desenvolvimento Full Stack</h4>
-              <ul>
-                <li>Aplicativos Web</li>
-                <li>Mobile</li>
-                <li>Sistemas</li>
-                <li>API</li>
-                <li>Banco de Dados</li>
-                <li>Análise de Dados</li>
-                <li>Power BI</li>
-              </ul>
+   <!-- Seção Habilidades -->
+<section id="habilidades" class="py-5 bg-black text-white">
+    <div class="container">
+        <h2 class="text-center mb-5">Habilidades</h2>
+        
+        <div class="row g-4">
+            <!-- Hard Skills -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-dark rounded-3 border border-info h-100">
+                    <h3 class="text-info mb-4"><i class="fas fa-code me-2"></i>Hard Skills</h3>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>SQL/PostgreSQL</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-info" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>JavaScript/React</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-info" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Java/Spring Boot</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-info" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>OutSystems</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress bg-secondary">
+                            <div class="progress-bar bg-info" style="width: 75%"></div>
+                        </div>
+                        <small class="text-muted">Low-Code</small>
+                    </div>
+                </div>
             </div>
             
-            <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <h1>---------------💼---------------</h1>
-              <h4>Analista de Desenvolvimento de Sistemas</h4>
-              <ul>
-                <li>Analisar, projetar, desenvolver e implementar sistemas de informação</li>
-                <li>Coletar e analisar os requisitos dos usuários e das partes interessadas para entender as necessidades do sistema</li>
-                <li>Projetar soluções de software eficazes e eficientes com base nos requisitos</li>
-                <li>Escrever os códigos, seguindo as melhores práticas de programação</li>
-              </ul>
-            </div>
-          
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <h1>------------🎨------------</h1>
-                      <h4>Desenvolvimento Front End</h4>
-                      <ul>
-                        <li>HTML, CSS e JavaScript com o uso de Frameworks e Bibiotecas </li>
-                        <li>Otimização de Websites e Interfaces</li>
-                        <li>Utilização de Frameworks e bibliotecas</li>
-                        <li>Design Responsivo</li>
-                        <li>FrameWorks: Bootstrap, ReactJs, TailwindCSS, Next.js, Vue.js...</li>
-                      </ul>
+            <!-- Soft Skills -->
+            <div class="col-lg-6">
+                <div class="p-4 bg-dark rounded-3 border border-info h-100">
+                    <h3 class="text-info mb-4"><i class="fas fa-users me-2"></i>Soft Skills</h3>
+                    
+                    <div class="soft-skill-item mb-3">
+                        <i class="fas fa-people-carry text-info me-2"></i>
+                        <span>Trabalho em Equipe</span>
                     </div>
-
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <h1>----------⚙️----------</h1>
-                        <h4>Desenvolvimento Back End</h4>
-                        <ul>
-                          <li>POO </li>
-                          <li>Java</li>
-                          <li>Spring Boot</li>
-                          <li>node.js</li>
-                          <li>mySQL PostgreSQL</li>
-                        </ul>
-                      </div>
-  
-          </div>
+                    
+                    <div class="soft-skill-item mb-3">
+                        <i class="fas fa-lightbulb text-info me-2"></i>
+                        <span>Resolução de Problemas</span>
+                    </div>
+                    
+                    <div class="soft-skill-item mb-3">
+                        <i class="fas fa-rocket text-info me-2"></i>
+                        <span>Inovação</span>
+                    </div>
+                    
+                    <div class="soft-skill-item mb-3">
+                        <i class="fas fa-handshake text-info me-2"></i>
+                        <span>Comprometimento</span>
+                    </div>
+                    
+                    <div class="soft-skill-item mb-3">
+                        <i class="fas fa-bolt text-info me-2"></i>
+                        <span>Proatividade</span>
+                    </div>
+                    
+                    <div class="soft-skill-item mb-3">
+                        <i class="fas fa-user-shield text-info me-2"></i>
+                        <span>Autonomia</span>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+    </div>
+</section>
 
+    <!-- Seção serviços -->
+<section id="servicos" class="py-5 bg-black text-white">
+    <div class="container">
+        <h2 class="text-center mb-5" data-aos="fade-up">Serviços</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="servico-card h-100 p-4 bg-dark rounded-3 border border-info">
+                    <div class="servico-icon text-center mb-3">
+                        <i class="fas fa-laptop-code fa-3x text-info"></i>
+                    </div>
+                    <h4 class="text-center mb-3 text-info">Desenvolvimento Full Stack</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Aplicativos Web</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Mobile</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Sistemas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>API</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Banco de Dados</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Análise de Dados</li>
+                        <li><i class="fas fa-check-circle text-info me-2"></i>Power BI</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="servico-card h-100 p-4 bg-dark rounded-3 border border-info">
+                    <div class="servico-icon text-center mb-3">
+                        <i class="fas fa-chart-line fa-3x text-info"></i>
+                    </div>
+                    <h4 class="text-center mb-3 text-info">Analista de Sistemas</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Análise e projeto de sistemas</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Coleta de requisitos</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Design de soluções</li>
+                        <li><i class="fas fa-check-circle text-info me-2"></i>Melhores práticas de código</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="servico-card h-100 p-4 bg-dark rounded-3 border border-info">
+                    <div class="servico-icon text-center mb-3">
+                        <i class="fas fa-paint-brush fa-3x text-info"></i>
+                    </div>
+                    <h4 class="text-center mb-3 text-info">Front End</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>HTML, CSS e JavaScript</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Frameworks modernos</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Design Responsivo</li>
+                        <li><i class="fas fa-check-circle text-info me-2"></i>React, Vue, Next.js</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+                <div class="servico-card h-100 p-4 bg-dark rounded-3 border border-info">
+                    <div class="servico-icon text-center mb-3">
+                        <i class="fas fa-server fa-3x text-info"></i>
+                    </div>
+                    <h4 class="text-center mb-3 text-info">Back End</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Java e Spring Boot</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Node.js</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-info me-2"></i>Banco de Dados</li>
+                        <li><i class="fas fa-check-circle text-info me-2"></i>Arquitetura de APIs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Seção Contato -->
     <!-- <section id="contato" class="py-5 bg-light">
         <div class="container">
@@ -864,7 +953,12 @@
 
     <!-- Rodapé -->
     <footer class="bg-dark py-3 text-center">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
+        <img
+          src="img/imagemLlogoSemFundo.jpg"
+          class="logo img-fluid"
+          alt="Logo"
+        />
         <p class="text-light mb-0">
           &copy; 2025 Desenvolvido por Geisila Costa. Todos os direitos
           reservados.

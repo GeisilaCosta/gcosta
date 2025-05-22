@@ -34,37 +34,175 @@ body {
 /* Hero Section */
 .hero-section {
   width: 100%;
-  height: auto;
-  background: linear-gradient(rgba(95, 95, 95, 0.877), rgba(8, 8, 8, 0.863)),
-    url("img/codigos.jpg");
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+    url("img/cod2.jpeg");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.tagline {
+  font-size: 1.5rem;
+  margin-top: 0px;
 }
 
-.hero-section img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  max-width: 100%;
+/* Efeito 3D para a foto de perfil */
+.profile-3d-container {
+  perspective: 1000px;
+  margin: 0 auto 30px;
+}
+
+.profile-3d {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
 }
 
 .profile-img {
-  width: 120px;
-  height: 120px;
-  border: 4px solid #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #0dcaf0;
+  box-shadow: 0 0 20px rgba(13, 202, 240, 0.5);
+  object-fit: cover;
+  transform: translateZ(20px);
 }
 
-.tagline {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-top: 1rem;
+/* Animação de flutuação */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(10deg);
+  }
 }
 
+/* Efeito de texto rotativo */
+.profession-text {
+  min-height: 60px;
+  display: inline-block;
+}
+
+.txt-rotate {
+  color: #0dcaf0;
+}
+
+/* Botões com efeito */
+.btn-hover-effect {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(13, 202, 240, 0.3);
+}
+
+.btn-hover-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn-hover-effect:hover::before {
+  left: 100%;
+}
+
+/* Seta animada para scroll */
+.scroll-down {
+  position: absolute;
+  bottom: 100px;
+  right: 90%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-decoration: none;
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+.wheel {
+  width: 3px;
+  height: 10px;
+  background-color: #0dcaf0;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  animation: wheel 2s linear infinite;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.arrow {
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid #0dcaf0;
+  border-bottom: 2px solid #0dcaf0;
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: arrow 2s infinite;
+}
+
+.arrow-first {
+  animation-delay: 0.1s;
+}
+
+.arrow-second {
+  animation-delay: 0.2s;
+}
+
+.arrow-third {
+  animation-delay: 0.3s;
+}
+
+@keyframes wheel {
+  to {
+    opacity: 0;
+    top: 25px;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* Botões */
 .btn-outline-light {
   border-color: #fff;
@@ -83,7 +221,7 @@ section {
 
 /* Sobre Mim */
 #sobre {
-  background-color: #020202;
+  background-color: #0c0c0c;
 }
 #sobre-mim-image {
   width: 100%;
@@ -95,45 +233,6 @@ section {
 .carousel-item {
   background-color: rgba(255, 255, 255, 0.1); /* ajuda a visualizar */
   color: #00ffff;
-}
-
-/* Efeitos 3D combinados com AOS */
-.img-3d-container {
-  perspective: 1000px;
-  display: inline-block;
-}
-
-.img-3d {
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-  box-shadow: 0 10px 30px -5px rgba(195, 0, 255, 0.3);
-  /* Efeito de flutuação suave quando não está hover */
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Ajuste para quando a animação AOS terminar */
-[data-aos="flip-left"].aos-animate .img-3d,
-[data-aos="zoom-in"].aos-animate .img-3d {
-  animation: float 6s ease-in-out infinite;
-}
-
-/* Efeito 3D no hover */
-.img-3d:hover {
-  transform: perspective(1000px) rotateY(15deg) rotateX(10deg) scale(1.05);
-  box-shadow: 0 0 30px rgba(174, 0, 255, 0.8);
-  animation: none; /* Remove a flutuação durante o hover */
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
 }
 
 /* Animada */
@@ -175,69 +274,6 @@ section {
   }
 }
 
-/* Animacao 3D*/
-.tech-carousel-3d {
-  width: 300px;
-  height: 300px;
-  margin: 100px auto;
-  perspective: 1000px;
-}
-
-.carousel3d {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  animation: rotate 20s linear infinite;
-}
-
-.carousel-item {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center center -150px;
-  font-size: 40px;
-  color: #007bff;
-  transition: transform 0.5s;
-}
-
-/* Distribuição dos ícones em círculo */
-.carousel-item:nth-child(1) { transform: rotateY(0deg)   translateZ(150px); }
-.carousel-item:nth-child(2) { transform: rotateY(45deg)  translateZ(150px); }
-.carousel-item:nth-child(3) { transform: rotateY(90deg)  translateZ(150px); }
-.carousel-item:nth-child(4) { transform: rotateY(135deg) translateZ(150px); }
-.carousel-item:nth-child(5) { transform: rotateY(180deg) translateZ(150px); }
-.carousel-item:nth-child(6) { transform: rotateY(225deg) translateZ(150px); }
-.carousel-item:nth-child(7) { transform: rotateY(270deg) translateZ(150px); }
-.carousel-item:nth-child(8) { transform: rotateY(315deg) translateZ(150px); }
-
-@keyframes rotate {
-  from { transform: rotateY(0deg); }
-  to   { transform: rotateY(360deg); }
-}
-
-@media (max-width: 576px) {
-  .tech-carousel-3d {
-    width: 200px;
-    height: 200px;
-  }
-
-  .carousel-item {
-    font-size: 24px; /* ícones menores */
-    transform-origin: center center -100px; /* ajusta a profundidade do 3D */
-  }
-
-  /* Atualize os ângulos com nova distância */
-  .carousel-item:nth-child(1) { transform: rotateY(0deg)   translateZ(100px); }
-  .carousel-item:nth-child(2) { transform: rotateY(45deg)  translateZ(100px); }
-  .carousel-item:nth-child(3) { transform: rotateY(90deg)  translateZ(100px); }
-  .carousel-item:nth-child(4) { transform: rotateY(135deg) translateZ(100px); }
-  .carousel-item:nth-child(5) { transform: rotateY(180deg) translateZ(100px); }
-  .carousel-item:nth-child(6) { transform: rotateY(225deg) translateZ(100px); }
-  .carousel-item:nth-child(7) { transform: rotateY(270deg) translateZ(100px); }
-  .carousel-item:nth-child(8) { transform: rotateY(315deg) translateZ(100px); }
-}
-
 
 /* Cards de Projetos */
 #projetos {
@@ -263,13 +299,46 @@ section {
   /* box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
   /*box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); Sombra para dar impressão de luz */
 
+}
 
+/* Estilos para a seção de habilidades */
+.habilidades-card {
+    transition: transform 0.3s ease;
+}
 
+.habilidades-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item {
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.02);
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+}
+
+.soft-skill-item {
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.soft-skill-item:hover {
+    background-color: rgba(13, 110, 253, 0.2);
+    transform: translateX(5px);
 }
 
 .card:hover {
   transform: translateY(-10px);
 }
+
 
 /* Descrição alternada */
 .hidden-description {
@@ -287,8 +356,6 @@ section {
   text-align: center;
   margin-top: 0px;
   padding: 20px;
-  border: 1px dashed #0f0f0f;
-  border-radius: 5px;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;

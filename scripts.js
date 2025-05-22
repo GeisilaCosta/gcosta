@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+ document.addEventListener("DOMContentLoaded", function () {
     // Animação de carregamento
     const heroSection = document.querySelector(".hero-section");
     if (heroSection) {
@@ -7,6 +7,58 @@ document.addEventListener("DOMContentLoaded", function () {
             heroSection.classList.add("loaded");
         }, 500);
     }
+
+    // Texto rotativo para as profissões
+class TxtRotate {
+  constructor(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 2000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+  }
+  tick() {
+    const i = this.loopNum % this.toRotate.length;
+    const fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+      this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+      this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    let delta = 200 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+      delta = this.period;
+      this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+      this.isDeleting = false;
+      this.loopNum++;
+      delta = 500;
+    }
+
+    setTimeout(() => this.tick(), delta);
+  }
+}
+
+// Inicialização quando o DOM estiver carregado
+window.onload = function() {
+  const elements = document.getElementsByClassName('txt-rotate');
+  for (let i=0; i<elements.length; i++) {
+    const toRotate = elements[i].getAttribute('data-rotate');
+    const period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+};
 
     // Inicializa EmailJS e configura o formulário
     emailjs.init("3t_K6GvSa5r8242g7");
@@ -38,34 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("Erro: Formulário ou elemento de status não encontrado!");
     }
-
-    // Inicializa AOS com configurações personalizadas
-    AOS.init({
-        duration: 800,
-        easing: 'ease-out-quart',
-        once: true,
-        offset: 120
-    });
-
-    // Efeito 3D para a imagem na seção "Sobre Mim"
-    const img3d = document.querySelector('.img-3d');
-    if (img3d) {
-        img3d.addEventListener('mousemove', (e) => {
-            if (img3d.closest('.aos-animate')) { // Só ativa após animação AOS
-                const container = img3d.getBoundingClientRect();
-                const xAxis = (container.width / 2 - (e.clientX - container.left)) / 15;
-                const yAxis = (container.height / 2 - (e.clientY - container.top)) / 15;
-                img3d.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${-yAxis}deg) scale(1.05)`;
-            }
-        });
-
-        img3d.addEventListener('mouseleave', () => {
-            img3d.style.transform = '';
-        });
-    }
 });
 
-// Função para alternar descrição (mantida igual)
+// Função para alternar descrição
 function toggleDescription(id, button) {
     const desc = document.getElementById(id);
     if (!desc) return;
