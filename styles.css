@@ -2,7 +2,7 @@
 html,
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f8f9fa;
+  background-color: #070707;
   color: #696969;
   margin: 0;
   padding: 0;
@@ -41,7 +41,7 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: #fff;
+  color: #888888;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,6 +133,7 @@ body {
   transform: translateX(-50%);
   color: #fff;
   text-decoration: none;
+  
 }
 
 .mouse {
@@ -238,7 +239,9 @@ section {
 /* Animada */
 .tech-carousel-wrapper {
   overflow: hidden;
-  background: #58027a; 
+  background: #0c0c0c; 
+  border: #3e1983 dashed 1px;
+  border-radius: 10px;
   padding: 20px 0;
 }
 
@@ -275,9 +278,10 @@ section {
 }
 
 
+
 /* Cards de Projetos */
 #projetos {
-  margin-top: 0px;
+  margin-top: 30px;
   color: rgb(136, 138, 139);
   background-color: #1a1a1a !important; /* Fundo escuro */
   padding: 20px; /* Adiciona um pouco de espaço interno */
@@ -300,6 +304,200 @@ section {
   /*box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); Sombra para dar impressão de luz */
 
 }
+
+/* Seção CTA */
+.cta-section {
+  background:radial-gradient(circle, #05021d, #231f49, #020202); 
+
+  color: #8d8c8c;
+  padding: 100px 0;
+  position: relative;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #9e9e9e, #038099);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cta-section .lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Garante que os botões são clicáveis */
+.btn {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+/* Corrige problemas de clique */
+.cta-section .container {
+  position: relative;
+  z-index: 10;
+}
+
+.particles {
+  pointer-events: none; /* Permite clicar através das partículas */
+}
+
+.btn-hover-effect {
+  pointer-events: auto;
+  position: relative;
+}
+
+/* Remove qualquer overlay invisível */
+.cta-section::before, .cta-section::after {
+  pointer-events: none;
+}
+
+
+/* Remove qualquer overlay que possa estar bloqueando */
+.cta-buttons::before {
+  content: none !important;
+}
+
+/* Efeito hover visual */
+.btn-hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.4);
+}
+
+.btn-primary {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  padding: 12px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0aa5c4;
+  border-color: #0aa5c4;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(13, 202, 240, 0.3);
+}
+
+.btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-hover-effect {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-hover-effect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(13, 202, 240, 0.3);
+}
+
+/* Garante que nada está cobrindo os botões */
+.cta-buttons {
+  position: relative;
+  z-index: 10;
+}
+
+
+/* Efeito de partículas */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  background-color: rgba(13, 202, 240, 0.3);
+  border-radius: 50%;
+  animation: float-particle 45s infinite linear;
+}
+
+.particle:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  top: 10%;
+  left: 20%;
+  animation-duration: 0s;
+}
+
+.particle:nth-child(2) {
+  width: 15px;
+  height: 15px;
+  top: 60%;
+  left: 80%;
+  animation-duration: 25s;
+}
+
+.particle:nth-child(3) {
+  width: 10px;
+  height: 10px;
+  top: 30%;
+  left: 50%;
+  animation-duration: 15s;
+}
+
+.particle:nth-child(4) {
+  width: 25px;
+  height: 25px;
+  top: 80%;
+  left: 30%;
+  animation-duration: 30s;
+}
+
+.particle:nth-child(5) {
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 10%;
+  animation-duration: 18s;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-500px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 70px 0;
+  }
+  
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-buttons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .cta-buttons .btn.me-3 {
+    margin-right: 0 !important;
+  }
+}
+
 
 /* Estilos para a seção de habilidades */
 .habilidades-card {
@@ -340,6 +538,7 @@ section {
 }
 
 
+
 /* Descrição alternada */
 .hidden-description {
   display: none;
@@ -361,6 +560,84 @@ section {
   max-width: 100%;
 }
 
+/* Seção Formações */
+#formacoes {
+background-color: #111111 !important;
+  margin-top: 30px;
+}
+
+#card-formacoes {
+  transition: transform 0.3s;
+  max-width: 100%;
+  background-color: #bdbcbc65;
+  border: 2px solid transparent; /* Remove o contorno padrão */
+  border-image: linear-gradient(to right,rgb(3, 218, 247), rgb(187, 3, 243), #4b6cb7) 1; /* Degradê de azul e roxo */
+  /* box-shadow: 0 0 5px rgba(75, 108, 183, 0.5), 0 0 10px rgba(3, 218, 247, 0.5), 0 0 15px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
+  /* box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); /* Sombra para dar impressão de luz */
+  /*box-shadow: 0 0 10px rgba(75, 108, 183, 0.5), 0 0 20px rgba(3, 218, 247, 0.5), 0 0 30px rgba(212, 69, 212, 0.5); Sombra para dar impressão de luz */
+
+}
+
+.hover-effect {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-header {
+  padding: 1.2rem;
+  color: #818080!important;
+ 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+}
+
+.diploma-carousel {
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.diploma-carousel img {
+  max-height: 200px;
+  width: auto;
+  object-fit: contain;
+  transition: opacity 0.5s ease;
+}
+
+#titulo-card{
+  color: rgb(145, 146, 146)!important;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #807e7e;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .diploma-carousel img {
+    max-height: 150px;
+  }
+  
+  .card-header {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+}
 /* Ícones Sociais */
 .social-icons {
   font-size: 1.5rem;
@@ -378,16 +655,78 @@ section {
 }
 
 /* Rodapé */
-footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
+#rodape {
+  padding: 5px; 
+  box-sizing: border-box;
+  width: 100%;
+  border-top: 1px solid rgba(13, 202, 240, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+#rodape::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/cod2.jpeg') center/cover!important;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+#footer-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+  position: relative; 
+  right: auto; 
+}
+
+footer .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer p {
-  margin: 0;
+  text-align: center;
+  font-size: 16px;
 }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-link {
+  color: #9b9898;
+  background: rgba(255, 255, 255, 0.1);
+  border: rgba(13, 202, 240, 0.3) solid 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #0dcaf0;
+  background: rgba(13, 202, 240, 0.2);
+  transform: translateY(-3px);
+}
+
+.social-link i {
+  font-size: 1rem;
+}
+
 
 /* Media Queries para dispositivos menores */
 @media (max-width: 768px) {
